@@ -1,21 +1,12 @@
 import PageObject.MainPage;
-import PageObject.OrderStatusPage;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import java.util.concurrent.TimeUnit;
 
-import static PageObject.MainPage.URL;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class OrderStatusTest extends BaseUITest {
 
-
     @Test
-    public void checkOrderStatusWhenOrderNotExist(){
+    public void checkOrderStatusWhenOrderNotExist() {
         boolean isOrderStatusNotFound = new MainPage(driver)
                 .openPage()
                 .clickCookieInfoButton()

@@ -1,11 +1,9 @@
-import PageObject.ConfirmOrderPage;
 import PageObject.MainPage;
-import PageObject.OrderPage;
 import org.junit.Test;
-import java.util.concurrent.TimeUnit;
-import static org.junit.Assert.assertTrue;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+
+import static org.junit.Assert.assertTrue;
 
 
 @RunWith(Parameterized.class)
@@ -22,6 +20,7 @@ public class OrderTest extends BaseUITest {
         this.adress = adress;
         this.phone = phone;
     }
+
     @Parameterized.Parameters // добавили аннотацию
     public static Object[][] getData() {
         return new Object[][]{
@@ -31,8 +30,8 @@ public class OrderTest extends BaseUITest {
     }
 
     @Test
-    public void checkOrderMake(){
-         boolean isOrderConfirm = new MainPage(driver)
+    public void checkOrderMake() {
+        boolean isOrderConfirm = new MainPage(driver)
                 .openPage()
                 .clickCookieInfoButton()
                 .clickOrderMakeButton("up")
@@ -47,8 +46,9 @@ public class OrderTest extends BaseUITest {
                 .isOrderConfirm();
         assertTrue("Order not Make! Confirm Message don't display", isOrderConfirm);
     }
+
     @Test
-    public void checkOrderMakeDownButton(){
+    public void checkOrderMakeDownButton() {
         boolean isOrderConfirm = new MainPage(driver)
                 .openPage()
                 .clickCookieInfoButton()

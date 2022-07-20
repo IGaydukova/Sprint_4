@@ -14,7 +14,7 @@ public class BaseUITest {
     //    WebDriverManager.firefoxdriver().setup();
     //    driver = new FirefoxDriver();
 
-   // Google Chrome
+    // Google Chrome
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
 
